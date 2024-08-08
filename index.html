@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+</head>
+<body>
+    <header>
+        <h1>Calculadora IMC</h1>
+    </header>
+    <main>
+        <div class="container-box">
+            <form action="" id="formulario">
+                <div class="input-peso">
+                    <label for="">Digite seu peso:</label>
+                    <input type="number" name="peso" placeholder="Peso (Kg)" step="0.1" min="0" required>
+                </div>
+                <div class="input-altura">
+                    <label for="">Digite sua altura:</label>
+                    <input type="number"" name="altura" placeholder="Altura (m)" step="0.01" min="0" required>
+                </div>
+                <button id="butao">Calcular</button>
+            </form>
+        </div>
+        <section class="resultado">
+            <div class="aba-resultado">
+                <h1>seu IMC é:</h1>
+                <p id="resultado-imc"></p>
+            </div>
+            <p>Como chegamos ao número à esquerda: o índice de massa corporal de um adulto
+            é o seu peso em quilos (por exemplo, 80 kg), dividido por sua altura ao quadrado (vamos imaginar, 1,80 m x 1,80 m).</p>
+        </section>
+    </main>
+    <script src="/script.js"></script>
+</body>
+</html>
