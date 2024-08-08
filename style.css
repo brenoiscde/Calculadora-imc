@@ -1,21 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ubuntu:wght@400;500;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
+body {
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;
     background-color: #ffffff3e;
 }
-header{
+
+header {
     background-color: #98928e64;
-    width: 100%; /* Garante que o header ocupe toda a largura da página */
-    padding: 10px 0; /* Adiciona um padding em cima e embaixo, se desejar */
+    width: 100%;
+    padding: 10px 0;
+    max-width: 100%;
 }
-header h1{
+
+header h1 {
     display: flex;
     font-size: 45px;
     color: #98928e;
@@ -23,12 +19,8 @@ header h1{
     padding: 10px;
     align-items: center;
 }
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-.container-box{
+
+.container-box {
     display: flex;
     justify-content: center;
     margin-top: 100px;
@@ -40,52 +32,56 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-left: 25%;
     background-color: #98928e82;
 }
-.resultado{
+
+.resultado {
     display: flex;
-    justify-content: center; 
-    gap: 15rem;  
+    justify-content: center;
+    gap: 15rem;
     align-items: center;
     margin-top: 80px;
 }
+
 .resultado p {
     max-width: 22%;
     font-weight: 400;
     font-size: 18px;
 }
-.aba-resultado h1{
+
+.aba-resultado h1 {
     font-size: 30px;
     font-weight: 700;
 }
-#resultado-imc{
+
+#resultado-imc {
     font-size: 76px;
     position: relative;
     left: 25px;
     font-weight: 900;
     color: red;
 }
-.input-altura{
+
+.input-altura,
+.input-peso {
     display: flex;
     flex-direction: column;
     width: 15rem;
     align-items: center;
     gap: 7px;
 }
-.input-peso{
-    display: flex;
-    flex-direction: column;
-    width: 15rem;
-    align-items: center;
-    gap: 15px;
+
+.input-peso {
     margin-bottom: 20px;
 }
-label{
+
+label {
     display: flex;
     font-size: 32px;
     font-weight: 500;
     white-space: nowrap;
     color: white;
 }
-input{
+
+input {
     border-radius: 5px;
     color: #98928e;
     font-family: "Poppins", sans-serif;
@@ -94,7 +90,8 @@ input{
     padding: 7px;
     font-size: 22px;
 }
-button{
+
+button {
     align-items: center;
     font-size: 32px;
     padding: 10px 50px;
@@ -103,42 +100,131 @@ button{
     cursor: pointer;
     margin: 25px 0 20px 5%;
 }
-.container-situacoes{
+
+.container-situacoes {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-.container-situacoes .situacao{
+
+.container-situacoes .situacao {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
     padding-bottom: 60px;
 }
-.container-situacoes h2{
+
+.container-situacoes h2 {
     font-size: 18px;
 }
-.situacao .texto{
+
+.situacao .texto {
     max-width: 50%;
     font-size: 14px;
     font-weight: 400;
 }
-.situacao img{
+
+.situacao img {
     width: 150px;
 }
-.entenda{
+
+.entenda {
     display: flex;
     justify-content: center;
     margin-top: 130px;
 }
-footer{
+
+footer {
     display: flex;
     background-color: #98928e34;
-    width: 100%; /* Garante que o header ocupe toda a largura da página */
+    width: 100%;
     padding: 100px 0;
 }
 
-.about p,.redes p, .Endereco p{
-    font-size:14px;
+.about p,
+.redes p,
+.Endereco p {
+    font-size: 14px;
     font-weight: 400;
     max-width: 30%;
+}
+
+/* Media Query para dispositivos móveis */
+@media (max-width: 375px) {
+    header h1 {
+        font-size: 30px;
+        margin-left: 10px;
+    }
+
+    .container-box {
+        display: flex;
+        flex-direction: column;
+        max-width: 90%;
+        margin-left: 5%;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .resultado {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 40px;
+    }
+
+    .resultado p {
+        font-size: 16px;
+        max-width: 60%;
+        text-align: center;
+    }
+
+    #resultado-imc {
+        font-size: 48px;
+        position: static;
+        text-align: center;
+    }
+
+    .input-altura,
+    .input-peso {
+        width: 100%;
+    }
+
+    label {
+        font-size: 24px;
+    }
+
+    input {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 24px;
+        padding: 10px 20px;
+        margin-left: 50px;
+    }
+
+    .container-situacoes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-situacoes .situacao {
+        margin-bottom: 30px;
+    }
+
+    .situacao img {
+        width: 100px;
+    }
+
+    footer {
+        padding: 50px 0;
+    }
+
+    .about p,
+    .redes p,
+    .Endereco p {
+        max-width: 90%;
+    }
 }
